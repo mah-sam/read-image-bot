@@ -1,3 +1,4 @@
 pillow
 discord.py
 pytesseract
+dotenv
