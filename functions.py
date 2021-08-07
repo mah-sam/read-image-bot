@@ -1,8 +1,9 @@
 import pytesseract
 import requests
+import os
 from PIL import Image
 
-pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = os.getenv('TESSDATA_PREFIX')
 
 def is_image(url):
     '''Returns True if url is a proper image else returns false'''
