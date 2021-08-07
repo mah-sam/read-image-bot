@@ -22,7 +22,10 @@ async def on_message(message):
 
     if "873485624034877481" in message.content:  
         print("Mention detected".center(100, '-'))
-        lang = 'eng'
+        if 'ar' in message.content
+            lang = 'ara'
+        else:
+            lang = 'eng'
         
         async for mes in message.channel.history(limit=200):
             if mes.attachments:
