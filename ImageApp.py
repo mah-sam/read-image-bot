@@ -31,7 +31,7 @@ async def on_message(message):
                     print("Last image in channel detected".center(100, '-'))
                     try:
                         print("Getting OCR response".center(100, '-'))
-                        response = process_image(url, lang)
+                        response = process_image(url, lang).replace("|", "I").replace("\n", " ")
                         print("Text was successfully processed".center(100, '-'))
                         await message.channel.send(response, tts=True)
                     except:
