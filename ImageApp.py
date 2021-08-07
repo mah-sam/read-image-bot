@@ -12,7 +12,7 @@ bot = discord.Client()
 async def on_ready():
     print(
         f'{bot.user} is connected to the following guild:\n'
-        f'{bot.user.guild.name} (id: {bot.user.guild.id})'
+        f'{bot.guild.name} (id: {bot.guild.id})'
     )
 
 
