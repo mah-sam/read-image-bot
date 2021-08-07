@@ -29,13 +29,13 @@ async def on_message(message):
                 url = str(mes.attachments[-1])
                 if is_image(url):
                     print("Last image in channel detected".center(100, '-'))
-                    #try:
-                    print("Getting OCR response".center(100, '-'))
-                    response = process_image(url, lang)
-                    print("Text was successfully processed".center(100, '-'))
-                    await message.channel.send(response, tts=True)
-                    #except:
-                    #await message.channel.send("Sorry, could not read the image.")
+                    try:
+                        print("Getting OCR response".center(100, '-'))
+                        response = process_image(url, lang)
+                        print("Text was successfully processed".center(100, '-'))
+                        await message.channel.send(response, tts=True)
+                    except:
+                        await message.channel.send("Sorry, no text found.")
                     return
         await message.channel.send("No image found in the last 200 messages.")
                     
