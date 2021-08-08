@@ -18,3 +18,9 @@ The bot is deployed and can be invited via [this link](https://discord.com/api/o
 (note that it only extracts from the last image in the channel)
 4. If the text is in Arabic use "@ReadImage ar"
 5. To turn off Text-to-Speech use "@ReadImage off", otherwise it's automatically on.
+
+## Justification
+
+- The bot only reads the last image to keep commands as simple as possible
+- Mentioning is used as a command due to the many ways commands can conflict with other bots
+- The other files are important for Heroku deployment for installing and connecting dependencies
