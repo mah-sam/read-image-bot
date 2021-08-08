@@ -18,3 +18,8 @@ def process_image(image_url, language):
     '''Takes an image url and language code, returns the text in the image'''
     stream = requests.get(image_url, stream=True).raw
     return pytesseract.image_to_string(Image.open(stream), lang=language)
+
+
+def repair(text):
+    '''Removes and replaces likely mistaken chars'''
+    return text.replace("|", "I").replace("\n", " ")
