@@ -24,3 +24,4 @@ The bot is deployed and can be invited via [this link](https://discord.com/api/o
 - The bot only reads the last image to keep commands as simple as possible
 - Mentioning is used as a command due to the many ways commands can conflict with other bots
 - The other files are important for Heroku deployment for installing and connecting dependencies
+- Have tried to make the code as clean and understandable as possible 
