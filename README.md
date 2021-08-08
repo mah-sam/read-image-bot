@@ -5,7 +5,7 @@ The bot is deployed and can be invited via [this link](https://discord.com/api/o
 
 ## Specifications
 
-- Written in python, the main files are: ReadImage.py and functions.py
+- Written in python, the main files are: ImageApp.py and functions.py
 - Uses Google tesseract 4.00 model to extract the text
 - Uses pytesseract for compatibility with python
 - Uses Discord.py package to communicate with Discord API
