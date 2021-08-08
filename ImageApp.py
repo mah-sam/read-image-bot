@@ -26,11 +26,20 @@ async def on_message(message):
     # Check if bot id in message for a ping
     if "873485624034877481" in message.content:  
         print("Mention detected".center(100, '-'))
-        if 'ar' in message.content:
+        content = message.content.lower()
+        
+        # Check language
+        if 'ar' in content:
             lang = 'ara'
         else:
             lang = 'eng'
         
+        # Check TTS
+        if 'off' in content:
+            tts = False
+        else:
+            tts = True
+            
         # Look up the last 200 messages in the channel
         async for mes in message.channel.history(limit=200):
             if mes.attachments:
@@ -40,10 +49,11 @@ async def on_message(message):
                     print("Last image in channel detected".center(100, '-'))
                     try:
                         print("Getting OCR response".center(100, '-'))
-                        # Get image text and replace probably mistaken chars
-                        response = process_image(url, lang).replace("|", "I").replace("\n", " ")
+                        # Get image text
+                        response = process_image(url, lang)
                         print("Text was successfully processed".center(100, '-'))
-                        await message.channel.send(response, tts=True)
+                        # Replace probably mistaken chars and send the response
+                        await message.channel.send(repair(response), tts=tts)
                     except:
                         await message.channel.send("Sorry, no text found.")
                     return
