@@ -1,5 +1,7 @@
 # ReadImage bot
 
+#### Due to the limited heroku plan, the deployment is currently off until someone wants to use it, pleas let me know (:
+
 A Discord bot that extracts text from the last image in the channel.  
 The bot is deployed and can be invited via [this link](https://discord.com/api/oauth2/authorize?client_id=873485624034877481&permissions=2169856&scope=bot)
 
