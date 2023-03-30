@@ -2,16 +2,17 @@
 
 #### Due to the limited heroku plan, the deployment is currently off. If you want to use it, please let me know (:
 
-A Discord bot that extracts text from the last image in the channel.  
-The bot is deployed and can be invited via [this link](https://discord.com/api/oauth2/authorize?client_id=873485624034877481&permissions=2169856&scope=bot)
+A Discord bot that extracts text from the last image in the channel. It uses tesseract 5.x to extract text from images, so its limitations are akin to the limitation of tesseract. 
+The bot is not hosted anywhere currently but it can be invited via [this link](https://discord.com/api/oauth2/authorize?client_id=873485624034877481&permissions=2169856&scope=bot) 
 
 ## Specifications
 
 - Written in python, the main files are: ImageApp.py and functions.py
-- Uses Google tesseract 4.00 model to extract the text
+- Uses Google tesseract 5.x model to extract the text
 - Uses pytesseract for compatibility with python
 - Uses Discord.py package to communicate with Discord API
 - Supports Arabic and English
+- Easy commands (only need to ping)
 
 ## Usage
 
