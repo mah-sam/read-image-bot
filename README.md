@@ -5,6 +5,8 @@
 A Discord bot that extracts text from the last image in the channel. It uses tesseract 5.x to extract text from images, so its limitations are akin to the limitation of tesseract. 
 The bot is not hosted anywhere currently but it can be invited via [this link](https://discord.com/api/oauth2/authorize?client_id=873485624034877481&permissions=2169856&scope=bot) 
 
+![Bot Preview](https://user-images.githubusercontent.com/82774404/228958434-8f6b010e-9d6e-4551-b37f-cffe9b638f6b.png)
+
 ## Specifications
 
 - Written in python, the main files are: ImageApp.py and functions.py
