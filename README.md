@@ -18,11 +18,39 @@ The bot is not hosted anywhere currently but it can be invited via [this link](h
 
 ## Usage
 
-1. [Invite the bot](https://discord.com/api/oauth2/authorize?client_id=873485624034877481&permissions=2169856&scope=bot) to your Discord server
+1. [Invite the bot](https://discord.com/api/oauth2/authorize?client_id=873485624034877481&permissions=2147555328&scope=bot) to your Discord server. If you want to invite your clone, replace YOUR_BOT_ID_HERE in the following URL: (https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID_HERE&permissions=2147555328&scope=bot)
+
 2. Mention the bot @ReadImage under the image you want to extract the text from  
 (note that it only extracts from the last image in the channel)
-4. If the text is in Arabic use "@ReadImage ar"
+
+4. If the text is in Arabic use "@ReadImage ara"
+
 5. To turn off Text-to-Speech use "@ReadImage off", otherwise it's automatically on.
+
+## How to clone it
+
+1. Create an application in Discord following the instructions [here](https://discordpy.readthedocs.io/en/stable/discord.html).
+
+2. You'll need to install tesseract 5.x on the host or the place you're running this application from and install the languages you need, the bot is configured for Arabic and English by default. Tesseract [documentation](https://tesseract-ocr.github.io/tessdoc/Installation.html) will help. Locate where it's stored, this info will be used later.
+
+3. Install the python packages named in requirements.txt
+
+4. Clone or download this repository.
+
+5. Open ImageApp.py and follow the commented instructions:
+
+![Parameters](https://user-images.githubusercontent.com/82774404/228966983-0c78399f-e30c-4a0f-897c-9110833a8d5e.png)
+
+6. Open functions.py and specify the location of your tesseract model. You can comment the command out if tesseract is in PATH as an environment variable. But for deployment purposes this must be specified.
+
+![Tesseract location](https://user-images.githubusercontent.com/82774404/228968499-bb209ece-ffdb-40fa-9cd8-d297adff370d.png)
+
+7. Run ImageApp.py by the command:
+```cmd
+python ImageApp.py
+```
+
+8. If everything is up and running, scroll up to the "Usage" section and follow it if you have not already read it. (:
 
 ## Justification
 
