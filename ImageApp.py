@@ -4,9 +4,14 @@ from functions import *
 
 
 # Configuration
-TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD = os.getenv('DISCORD_GUILD')
-bot = discord.Client()
+TOKEN = "TODO" # your bot token which you can only see once
+BOT_ID = "TODO" # used to check for ping in a message, should be called (Application ID) in your bot's menu
+PERM = 2147555328  # permission integer calculated in discord portal, add this to your bot's url 
+LANGS = ["ara", "eng"] # replace with languages you want to support, the command should follow the same letters
+DEFAULT = "eng" # Set your default language, for when the bot is called without any arguments
+
+intents = discord.Intents(messages=True)
+bot = discord.Client(intents=intents)
 
 
 @bot.event
@@ -24,15 +29,15 @@ async def on_message(message):
         return
     
     # Check if bot id in message for a ping
-    if "873485624034877481" in message.content:  
+    if BOT_ID in message.content:  
         print("Mention detected".center(100, '-'))
         content = message.content.lower()
-        
+        lang = DEFAULT
         # Check language
-        if 'ar' in content:
-            lang = 'ara'
-        else:
-            lang = 'eng'
+        for l in LANGS:
+            if l in content:
+                lang = l
+                break
         
         # Check TTS
         if 'off' in content:
