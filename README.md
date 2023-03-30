@@ -1,8 +1,7 @@
 # ReadImage bot
 
-#### Due to the limited heroku plan, the deployment is currently off. If you want to use it, please let me know (:
-
 A Discord bot that extracts text from the last image in the channel. It uses tesseract 5.x to extract text from images, so its limitations are akin to the limitation of tesseract. 
+#### Due to the limited heroku plan, the deployment is currently off. However, you can create your own clone by following "How to clone it" section.
 
 ![Bot Preview](https://user-images.githubusercontent.com/82774404/228958434-8f6b010e-9d6e-4551-b37f-cffe9b638f6b.png)
 
